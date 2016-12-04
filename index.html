@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Preeya Sharma</title>
+      <!-- Javascripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.fullPage.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#fullpage').fullpage();
+          anchors: ['home', 'skills', 'work', 'contact me'];
+        $('.works-placeholder, .skills-placeholder, .contact-placeholder').hover(function() {
+          $(this).css('background-color', 'magenta');
+          }, function() {
+          $(this).css('background-color', 'turquoise');
+        });
+      });
+    </script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="jquery.fullPage.css">
+    <style>
+
+      .row {
+        border: 2px dotted black;
+      }
+
+      .skills-placeholder {
+        background-color: turquoise;
+        color: white;
+        margin: 5px;
+        cursor: pointer;
+        text-align: center;
+        padding: 5% !important;
+      }
+
+      .home-placeholder {
+        background-color: turquoise;
+        color: white;
+        margin: 5px;
+        text-align: center;
+      }
+
+      .works-placeholder {
+        background-color: turquoise;
+        color: white;
+        margin: 5px;
+        cursor: pointer;
+        text-align: center;
+        padding: 5% !important;
+      }
+
+      .contact-placeholder {
+        background-color: turquoise;
+        color: white;
+        margin: 5px;
+        cursor: pointer;
+        text-align: center;
+        padding: 5% !important;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="fullpage">
+
+      <div class="section" data-anchor='home'>
+        <div class="row">
+          <div class="home-placeholder col s12 m12 l12"><h1>Preeya Sharma</h1></div>
+          <div class="home-placeholder col s12 m12 l12"><h3>Web Developer</h3></div>
+        </div>
+      </div>
+
+      <div class="section" data-anchor='skills'>
+
+        <div class="row">
+          <h1>Skills</h1>
+          <div class="skills-placeholder col s8 m4 l2"><p>Front End<p></div>
+          <div class="skills-placeholder col s8 m4 l2"><p>Back End<p></div>
+          <div class="skills-placeholder col s8 m4 l2"><p>Databases<p></div>
+          <div class="skills-placeholder col s8 m4 l2"><p>Methodology<p></div>
+        </div>
+      </div>
+
+      <div class="section" data-anchor='work'>
+
+        <div class="row">
+          <h1>Works</h1>
+          <div class="works-placeholder col s8 m4 l2"><p>Project</p></div>
+          <div class="works-placeholder col s8 m4 l2"><p>Project</p></div>
+          <div class="works-placeholder col s8 m4 l2"><p>Project</p></div>
+          <div class="works-placeholder col s8 m4 l2"><p>Project</p></div>
+        </div>
+      </div>
+
+      <div class="section" data-anchor='contact me'>
+        <div class="row">
+          <h1>Get In Touch</h1>
+          <h4>I'm available for hire starting December, 2016.</h4>
+          <div class="contact-placeholder col s8 m4 l1"><p>Email</p></div>
+          <div class="contact-placeholder col s8 m4 l1"><p>LinkedIn</p></div>
+          <div class="contact-placeholder col s8 m4 l1"><p>GitHub</p></div>
+          <div class="contact-placeholder col s8 m4 l1"><p>Resume</p></div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
