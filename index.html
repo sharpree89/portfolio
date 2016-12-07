@@ -2,110 +2,257 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="author" content="Preeya Sharma">
     <title>Preeya Sharma</title>
       <!-- Javascripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="jquery.fullPage.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
-      $(document).ready(function() {
-        $('#fullpage').fullpage();
-          anchors: ['home', 'skills', 'work', 'contact me'];
-        $('.works-placeholder, .skills-placeholder, .contact-placeholder').hover(function() {
-          $(this).css('background-color', 'magenta');
-          }, function() {
-          $(this).css('background-color', 'turquoise');
-        });
-      });
+    $(document).ready(function() {
+
+    });
     </script>
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="jquery.fullPage.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <style>
-
-      .row {
-        border: 2px dotted black;
+      html,body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 5% 0 0 0;
+        overflow-x: hidden;
       }
 
-      .skills-placeholder {
-        background-color: turquoise;
-        color: white;
-        margin: 5px;
-        cursor: pointer;
-        text-align: center;
-        padding: 5% !important;
+      .navbar {
+        margin-bottom: 100px;
       }
 
-      .home-placeholder {
-        background-color: turquoise;
-        color: white;
-        margin: 5px;
-        text-align: center;
+      h0 {
+        font-size: 1000%;
       }
 
-      .works-placeholder {
-        background-color: turquoise;
-        color: white;
-        margin: 5px;
-        cursor: pointer;
-        text-align: center;
-        padding: 5% !important;
+      #home {
+        /*margin-top: 300px;
+        margin-bottom: 300px;*/
       }
 
-      .contact-placeholder {
-        background-color: turquoise;
-        color: white;
-        margin: 5px;
-        cursor: pointer;
-        text-align: center;
-        padding: 5% !important;
+      #projects {
+        /*margin-top: 150px;
+        margin-bottom: 150px;*/
       }
 
+      #skills {
+        /*margin-top: 300px;
+        margin-bottom: 300px;*/
+      }
+
+      #contact {
+        /*margin-top: 150px;
+        margin-bottom: 150px;*/
+      }
+
+      .project-row {
+        display: inline-block;
+        border: 2px dotted blue;
+      }
+
+      img {
+        border: 1px solid black;
+      }
+
+      .fa {
+        color: black !important;
+        font-size: 30px;
+      }
+
+      .fa:hover, .fa:active {
+        color: pink !important;
+      }
+
+      .thumbnail {
+        border: 1px solid black;
+      }
+
+      .anchor {
+        font-size: 36px;
+        color: magenta;
+      }
     </style>
   </head>
   <body>
-    <div id="fullpage">
+    <center>
+      <div id="container">
+        <!-- NavBar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-left">
+                <li><a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></span></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-download" aria-hidden="true"></i></a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#home"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                <li><a href="#skills"><i class="fa fa-laptop" aria-hidden="true"></i></a></li>
+                <li><a href="#projects"><i class="fa fa-th" aria-hidden="true"></i></a></li>
+                <li><a href="#contact"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
 
-      <div class="section" data-anchor='home'>
-        <div class="row">
-          <div class="home-placeholder col s12 m12 l12"><h1>Preeya Sharma</h1></div>
-          <div class="home-placeholder col s12 m12 l12"><h3>Web Developer</h3></div>
+        <!-- Section 0 - Home -->
+        <div id="home">
+          <div class="row">
+            <a name="home" class="anchor">Anchor: Home</a><h0>PREEYA SHARMA</h0>
+            <hr>
+            <h1>FULL STACK WEB DEVELOPER</h1>
+          </div>
+        </div>
+
+        <!-- Section 1 - Skills -->
+        <div id="skills">
+          <div class="row">
+            <a name="skills" class="anchor">Anchor: Skills</a><h1>Skills & Expertise</h1>
+            <div class="skills-placeholder col s12 m12 l12"><p>Front End<p></div>
+            <div class="skills-placeholder col s12 m12 l12"><p>Back End<p></div>
+            <div class="skills-placeholder col s12 m12 l12"><p>Databases<p></div>
+            <div class="skills-placeholder col s12 m12 l12"><p>Methodology<p></div>
+            <div class="contact-placeholder col s12 m12 l12"><p><img src="images/download-symbol.png" alt="download"><p></div>
+          </div>
+        </div>
+
+        <!-- Languages: Javascript*, Python*, C#*, HTML5*, CSS3*
+        Frameworks: NodeJS*, ExpressJS, Django*, NancyFx*, .NET*, AngularJS*, ReactJS*, jQuery*, jQuery UI, Bootstrap*, Materialize*
+        Databases/ORMs: SQL*, MySQL*, SQLite*, PostGres*, Entity Framework, MongoDB/Mongoose*
+        Cloud: AWS*, Azure (cloud icon), Heroku*, Digital Ocean*, Docker*
+        Version Control: Git*, Github*
+        Other: Photoshop*, Illustrator*, Premiere*, Vim*, Bower*, linux*, Grunt*, NPM*, Yeoman*, terminal*, RWD*
+
+        use atom icon as "skills" symbol
+        -->
+
+        <!-- Section 2 - Projects -->
+        <div id="projects">
+          <a name="projects" class="anchor">Anchor: Projects</a><h1>Selected Projects</h1>
+          <!-- Row #1 -->
+          <div class="row project-row">
+            <!-- Pic #1 -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="images/puppy.png" alt="...">
+                <div class="caption">
+                  <h5>BAKEIT</h5>
+                  <p>Description</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visit This Site</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- Pic #2 -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="images/puppy.png" alt="...">
+                <div class="caption">
+                  <h5>GROUP CHAT</h5>
+                  <p>Description</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visit This Site</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- Pic #3 -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="images/puppy.png" alt="...">
+                <div class="caption">
+                  <h5>TWITTER CLONE</h5>
+                  <p>Description</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visit This Site</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- Pic #4 -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="images/puppy.png" alt="...">
+                <div class="caption">
+                  <h5>TIMELY</h5>
+                  <p>Description</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visit This Site</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Row #2 -->
+          <div class="row project-row">
+            <!-- Pic #5 -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="images/puppy.png" alt="...">
+                <div class="caption">
+                  <h5>WIZARD'S DUEL</h5>
+                  <p>Description</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visit This Site</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- Pic #6 -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="images/puppy.png" alt="...">
+                <div class="caption">
+                  <h5>PIZZA PARTY</h5>
+                  <p>Description</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visit This Site</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- Pic #7 -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="images/puppy.png" alt="...">
+                <div class="caption">
+                  <h5>RPG</h5>
+                  <p>Description</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visit This Site</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- Pic #8 -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="images/puppy.png" alt="...">
+                <div class="caption">
+                  <h5>PACMAN</h5>
+                  <p>Description</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visit This Site</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3 - Contact -->
+        <div id="contact">
+          <div class="row">
+            <a name-"contact" class="anchor">Anchor: Contact</a><h1>Get In Touch</h1>
+            <h4>I'm available for hire starting December 2016.</h4>
+            <div class="contact-placeholder col s12 m12 l12"><p><img src="images/envelope.png" alt="scroll-down"><p></div>
+            <div class="contact-placeholder col s12 m12 l12"><p><img src="images/linkedin-sign.png" alt="scroll-down"><p></div>
+            <div class="contact-placeholder col s12 m12 l12"><p><img src="images/github-sign-square.png" alt="scroll-down"><p></div>
+            <div class="contact-placeholder col s12 m12 l12"><p><img src="images/google-plus-symbol.png" alt="scroll-down"></p></div>
+          </div>
         </div>
       </div>
-
-      <div class="section" data-anchor='skills'>
-
-        <div class="row">
-          <h1>Skills</h1>
-          <div class="skills-placeholder col s8 m4 l2"><p>Front End<p></div>
-          <div class="skills-placeholder col s8 m4 l2"><p>Back End<p></div>
-          <div class="skills-placeholder col s8 m4 l2"><p>Databases<p></div>
-          <div class="skills-placeholder col s8 m4 l2"><p>Methodology<p></div>
-        </div>
-      </div>
-
-      <div class="section" data-anchor='work'>
-
-        <div class="row">
-          <h1>Works</h1>
-          <div class="works-placeholder col s8 m4 l2"><p>Project</p></div>
-          <div class="works-placeholder col s8 m4 l2"><p>Project</p></div>
-          <div class="works-placeholder col s8 m4 l2"><p>Project</p></div>
-          <div class="works-placeholder col s8 m4 l2"><p>Project</p></div>
-        </div>
-      </div>
-
-      <div class="section" data-anchor='contact me'>
-        <div class="row">
-          <h1>Get In Touch</h1>
-          <h4>I'm available for hire starting December, 2016.</h4>
-          <div class="contact-placeholder col s8 m4 l1"><p>Email</p></div>
-          <div class="contact-placeholder col s8 m4 l1"><p>LinkedIn</p></div>
-          <div class="contact-placeholder col s8 m4 l1"><p>GitHub</p></div>
-          <div class="contact-placeholder col s8 m4 l1"><p>Resume</p></div>
-        </div>
-      </div>
-
-    </div>
+    </center>
   </body>
 </html>
