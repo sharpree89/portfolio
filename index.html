@@ -16,63 +16,160 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css">
     <style>
       html,body {
         width: 100%;
         height: 100%;
         margin: 0px;
-        padding: 5% 0 0 0;
+        padding: 0;
         overflow-x: hidden;
       }
 
-      .navbar {
-        margin-bottom: 100px;
+      .navbar-fixed-top {
+        margin-bottom: 100% !important;
+      }
+
+      .navbar-fixed-bottom {
+        margin-top: 100px !important;
+      }
+
+      .navbar-nav {
+        float: none !important;
+        display: inline-block;
+      }
+
+      .bigspacer {
+        background-color: lightblue;
+        width: 100%;
+        height: 40em;
+      }
+
+      .smallspacer {
+        background-color: lightgreen;
+        width: 100%;
+        height: 10em;
       }
 
       h0 {
-        font-size: 1000%;
+        font-size: 900%;
       }
 
       #home {
-        /*margin-top: 300px;
-        margin-bottom: 300px;*/
+        border: 2px solid blue;
       }
 
-      #projects {
-        /*margin-top: 150px;
-        margin-bottom: 150px;*/
+      .anchor-home {
+        border: 1px solid magenta;
       }
 
       #skills {
-        /*margin-top: 300px;
-        margin-bottom: 300px;*/
+        border: 2px solid blue;
+      }
+
+      h1 {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .anchor-skills {
+        border: 1px solid magenta;
+        padding: 0px;
+      }
+
+      #projects {
+        border: 2px solid blue;
+      }
+
+      .anchor-projects {
+        border: 1px solid magenta;
+        padding: 0px;
+      }
+
+      h7 {
+        font-size: 600%;
+        vertical-align: bottom;
+        border: 2px dotted red;
       }
 
       #contact {
-        /*margin-top: 150px;
-        margin-bottom: 150px;*/
+        border: 2px solid blue;
+      }
+
+      .anchor-contact {
+        border: 1px solid magenta;
+        padding: 0px;
+      }
+
+      .contact {
+        font-size: 30px !important;
+      }
+
+      .thumbnail-contact {
+        padding: 0px;
+        margin: 0px;
+        width: 100px;
+      }
+
+      #contact-form {
+        margin-top: 2.5%;
+      }
+
+      .form-control {
+        margin-top: 1% !important;
+      }
+
+      .btn-contact {
+        margin-top: 1%;
+        padding: 1% 8% !important;
+        border-radius: 5px !important;
+
       }
 
       .project-row {
         display: inline-block;
-        border: 2px dotted blue;
+        width: 80%;
       }
 
       img {
         border: 1px solid black;
       }
 
+      /*Navbar icons*/
       .fa {
-        color: black !important;
-        font-size: 30px;
+        color: black;
+        font-size: 40px;
       }
 
-      .fa:hover, .fa:active {
-        color: pink !important;
+      .fa:hover, .fa:active, .fa:focus {
+        color: magenta !important;
+      }
+
+      /*Navbar atom icon*/
+      .devicon-atom-original {
+        color: black !important;
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .devicon-atom-original:hover, .devicon-atom-original:active, .devicon-atom-original:focus {
+        color: magenta !important;
+      }
+
+      /*Skills Icons*/
+      .dev, .devicons {
+        font-size: 150px;
+        color: black;
+        border-radius: 1px;
+        box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3);
+        margin: 10px;
       }
 
       .thumbnail {
-        border: 1px solid black;
+        border: none !important;
+        padding: 0px;
+        margin: 0px;
       }
 
       .anchor {
@@ -95,57 +192,101 @@
               </button>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav navbar-left">
-                <li><a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></span></a></li>
-                <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-download" aria-hidden="true"></i></a></li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
+              <ul class="nav navbar-nav">
                 <li><a href="#home"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                <li><a href="#skills"><i class="fa fa-laptop" aria-hidden="true"></i></a></li>
+                <li><a href="#skills"><i class="devicon-atom-original" aria-hidden="true"></i></a></li>
                 <li><a href="#projects"><i class="fa fa-th" aria-hidden="true"></i></a></li>
-                <li><a href="#contact"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                <li><a href="#contact"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
               </ul>
             </div>
           </div>
         </nav>
 
+
         <!-- Section 0 - Home -->
         <div id="home">
           <div class="row">
-            <a name="home" class="anchor">Anchor: Home</a><h0>PREEYA SHARMA</h0>
-            <hr>
-            <h1>FULL STACK WEB DEVELOPER</h1>
+            <p class="anchor-home"><a name="home" class="anchor">Anchor: Home</a></p>
+            <div class="smallspacer"></div>
+            <img src="images/profile.png" alt="">
+            <br>
+
+            <h0>PREEYA SHARMA</h0>
+            <div class="smallspacer"></div>
+            <h7>FULL STACK WEB DEVELOPER</h7>
           </div>
         </div>
+
+        <div class="bigspacer"></div>
 
         <!-- Section 1 - Skills -->
         <div id="skills">
           <div class="row">
-            <a name="skills" class="anchor">Anchor: Skills</a><h1>Skills & Expertise</h1>
-            <div class="skills-placeholder col s12 m12 l12"><p>Front End<p></div>
-            <div class="skills-placeholder col s12 m12 l12"><p>Back End<p></div>
-            <div class="skills-placeholder col s12 m12 l12"><p>Databases<p></div>
-            <div class="skills-placeholder col s12 m12 l12"><p>Methodology<p></div>
-            <div class="contact-placeholder col s12 m12 l12"><p><img src="images/download-symbol.png" alt="download"><p></div>
+            <p class="anchor-skills"><a name="skills" class="anchor">Anchor: Skills</a></p>
+            <div class="smallspacer"></div>
+
+            <h7>Skills & Expertise</h7>
+            <hr>
+            <div class="col s12 m12 l12">
+              <p>Languages<p>
+              <i class="dev devicon-javascript-plain"></i>
+              <i class="dev devicon-python-plain-wordmark"></i>
+              <i class="dev devicon-csharp-plain-wordmark"></i>
+            </div>
+            <div class="col s12 m12 l12">
+              <p>Front End<p>
+              <i class="dev devicon-html5-plain-wordmark"></i>
+              <i class="dev devicon-css3-plain-wordmark"></i>
+              <i class="dev devicon-jquery-plain-wordmark"></i>
+              <i class="dev devicon-bootstrap-plain-wordmark"></i>
+              <!-- materialize -->
+              <i class="dev devicon-bootstrap-plain-wordmark"></i>
+            </div>
+            <div class="col s12 m12 l12">
+              <p>Frameworks<p>
+              <i class="dev devicon-django-plain-wordmark"></i>
+              <i class="dev devicon-angularjs-plain-wordmark"></i>
+              <i class="dev devicon-react-original-wordmark"></i>
+              <span class="devicons devicons-nancy"></span>
+              <i class="dev devicon-dot-net-plain-wordmark"></i>
+            </div>
+            <div class="col s12 m12 l12">
+              <p>Databases & Servers<p>
+              <i class="dev devicon-mysql-plain-wordmark"></i>
+              <i class="dev devicon-postgresql-plain-wordmark"></i>
+                <!-- sqlite -->
+              <i class="dev devicon-postgresql-plain-wordmark"></i>
+              <i class="dev devicon-mongodb-plain-wordmark"></i>
+              <i class="dev devicon-nodejs-plain-wordmark"></i>
+            </div>
+            <div class="col s12 m12 l12">
+              <p>Cloud Computing<p>
+              <i class="dev devicon-docker-plain-wordmark"></i>
+              <i class="dev devicon-amazonwebservices-plain-wordmark"></i>
+              <i class="dev devicon-dot-net-plain"></i>
+              <!-- digital ocean -->
+              <i class="dev devicon-heroku-plain-wordmark"></i>
+              <i class="dev devicon-heroku-plain-wordmark"></i>
+            </div>
+            <div class="col s12 m12 l12">
+              <p>Other Tools<p>
+              <i class="dev devicon-git-plain-wordmark"></i>
+              <i class="dev devicon-bower-line-wordmark"></i>
+              <span class="devicons devicons-npm"></span>
+            </div>
           </div>
         </div>
 
-        <!-- Languages: Javascript*, Python*, C#*, HTML5*, CSS3*
-        Frameworks: NodeJS*, ExpressJS, Django*, NancyFx*, .NET*, AngularJS*, ReactJS*, jQuery*, jQuery UI, Bootstrap*, Materialize*
-        Databases/ORMs: SQL*, MySQL*, SQLite*, PostGres*, Entity Framework, MongoDB/Mongoose*
-        Cloud: AWS*, Azure (cloud icon), Heroku*, Digital Ocean*, Docker*
-        Version Control: Git*, Github*
-        Other: Photoshop*, Illustrator*, Premiere*, Vim*, Bower*, linux*, Grunt*, NPM*, Yeoman*, terminal*, RWD*
-
-        use atom icon as "skills" symbol
-        -->
+        <div class="bigspacer"></div>
 
         <!-- Section 2 - Projects -->
         <div id="projects">
-          <a name="projects" class="anchor">Anchor: Projects</a><h1>Selected Projects</h1>
-          <!-- Row #1 -->
+          <p class-"anchor-projects"><a name="projects" class="anchor">Anchor: Projects</a></p>
+          <div class="smallspacer"></div>
+          <h7>Selected Projects</h7>
+
+
+          <hr>
           <div class="row project-row">
             <!-- Pic #1 -->
             <div class="col-sm-6 col-md-4">
@@ -191,9 +332,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Row #2 -->
-          <div class="row project-row">
             <!-- Pic #5 -->
             <div class="col-sm-6 col-md-4">
               <div class="thumbnail">
@@ -241,17 +379,61 @@
           </div>
         </div>
 
+        <div class="bigspacer"></div>
+        <!-- <div class="smallspacer"></div> -->
+
         <!-- Section 3 - Contact -->
         <div id="contact">
-          <div class="row">
-            <a name-"contact" class="anchor">Anchor: Contact</a><h1>Get In Touch</h1>
-            <h4>I'm available for hire starting December 2016.</h4>
-            <div class="contact-placeholder col s12 m12 l12"><p><img src="images/envelope.png" alt="scroll-down"><p></div>
-            <div class="contact-placeholder col s12 m12 l12"><p><img src="images/linkedin-sign.png" alt="scroll-down"><p></div>
-            <div class="contact-placeholder col s12 m12 l12"><p><img src="images/github-sign-square.png" alt="scroll-down"><p></div>
-            <div class="contact-placeholder col s12 m12 l12"><p><img src="images/google-plus-symbol.png" alt="scroll-down"></p></div>
+          <p class="anchor-contact"><a name-"contact" class="anchor">Anchor: Contact</a></p>
+          <div class="smallspacer"></div>
+          <h7>Let's Talk</h7>
+          <hr>
+          <!-- Social Media -->
+          <div class="row project-row">
+            <div class="btn-group" role="group" aria-label="...">
+              <button type="button" class="btn btn-default"><a href="mailto:sharpree89@gmail.com"><i class="fa fa-envelope contact" aria-hidden="true"></i></a></button>
+              <button type="button" class="btn btn-default"><a href="https://www.linkedin.com/in/preeyasharma89"><i class="fa fa-linkedin-square contact" aria-hidden="true"></i></a></button>
+              <button type="button" class="btn btn-default"><a href="https://github.com/sharpree89"><i class="fa fa-github-square contact" aria-hidden="true"></i></a></button>
+              <button type="button" class="btn btn-default"><a><i class="fa fa-google-plus-square contact" aria-hidden="true"></i> </a></button>
+              <button type="button" class="btn btn-default"><a href="https://twitter.com/sharpree89"><i class="fa fa-twitter-square contact" aria-hidden="true"></i></a></button>
+              <button type="button" class="btn btn-default"><a href="https://drive.google.com/uc?export=download&id=0B0eGlgESoy3dSU9HWVhwbHowaUU"><i class="fa fa-download contact" aria-hidden="true"></i></a></button>
+            </div>
           </div>
+          <!-- Contact Form -->
+          <div class="row project-row">
+            <div id="contact-form" style="border: 1px solid red;">
+              <p>I am currently searching for opportunities in Seattle, WA. Wanna talk to me about a project? Just fill out the form below or send an email to sharpree89@gmail.com.</p>
+              <form action="">
+                <div class="form-group">
+                  <label for="contact-name"><i class="fa fa-user" aria-hidden="true" style="font-size: 20px !important;"></i> Your Name</label>
+                  <input class="form-control" id="contact-name">
+                </div>
+                <div class="form-group">
+                  <label for="contact-msg"><i class="fa fa-comment" aria-hidden="true" style="font-size: 20px !important;"></i> Your Message</label>
+                  <textarea class="form-control" id="contact-msg" rows="4"></textarea>
+                  <button class="btn btn-default btn-contact" type="submit">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- row project row div closing below -->
+          </div>
+          <!-- contact div closing below -->
         </div>
+
+        <div class="bigspacer"></div>
+        <div class="smallspacer"></div>
+        <div class="smallspacer"></div>
+        <div class="smallspacer"></div>
+
+        <!-- Footer -->
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <p>Hello!</p>
+            </div>
+          </div>
+        </nav>
+        <!-- container closing div below -->
       </div>
     </center>
   </body>
